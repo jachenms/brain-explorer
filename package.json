@@ -1,0 +1,51 @@
+{
+  "name": "brain-explorer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "verify:card": "node tools/verify-region-info-card.mjs",
+    "verify:interaction": "node tools/verify-brain-interaction.mjs && node tools/verify-brain-robustness.mjs && node tools/verify-brain-portals.mjs",
+    "verify:camera": "node tools/verify-brain-camera.mjs",
+    "verify:navigator": "node tools/verify-region-navigator.mjs",
+    "verify:leader-navigation": "node tools/verify-region-leader-navigation.mjs",
+    "verify:mobile": "node tools/verify-mobile-exhibit.mjs",
+    "verify:hover-label": "node tools/verify-region-hover-label.mjs",
+    "verify:material": "node tools/verify-brain-tissue-palette.mjs",
+    "verify:origin-trace": "node tools/verify-internal-origin-trace.mjs",
+    "verify:volume": "node tools/verify-brain-volume.mjs",
+    "verify:system8": "node tools/verify-system8-polish.mjs",
+    "capture:system8": "node tools/capture-system8-polish.mjs",
+    "benchmark:raycast": "node tools/benchmark-brain-raycast.mjs"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.7.0",
+    "@react-three/postprocessing": "^3.0.4",
+    "@vercel/analytics": "^2.0.1",
+    "motion": "^13.0.0",
+    "next": "16.3.0",
+    "postprocessing": "^6.39.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "three": "^0.185.1",
+    "three-mesh-bvh": "^0.9.14",
+    "three-stdlib": "^2.36.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/three": "^0.185.4",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.0",
+    "playwright": "^1.62.1",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@10.18.3"
+}
